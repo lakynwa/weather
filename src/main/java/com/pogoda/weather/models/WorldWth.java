@@ -6,13 +6,27 @@ import javax.persistence.*;
 public class WorldWth {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    private String date;
-    private String town;
-    private String temp;
-    private String  yavl;
-    private String  vlaj;
-    private String  davl;
+    public Long id;
+
+    @Override
+    public String toString() {
+        return "WorldWth{" +
+                "id=" + id +
+                ", date='" + date + '\'' +
+                ", town='" + town + '\'' +
+                ", temp='" + temp + '\'' +
+                ", yavl='" + yavl + '\'' +
+                ", vlaj='" + vlaj + '\'' +
+                ", davl='" + davl + '\'' +
+                '}';
+    }
+
+    public String date;
+    public String town;
+    public String temp;
+    public String  yavl;
+    public String  vlaj;
+    public String  davl;
 
     public WorldWth() {
     }

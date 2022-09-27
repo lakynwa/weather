@@ -1,20 +1,81 @@
 <!DOCTYPE html>
 <html xmlns:th="http://thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+        <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Главная страница</title>
 </head>
 <body>
-<div>
-<div th:each="el : ${worldWths}">
-    <h1 th:text="'Id: '+ ${el.id}"/>
- <h1 th:text="'Дата: '+ ${el.date}"/>
- <h1 th:text="'Город: '+ ${el.town}"/>
- <h1 th:text="'Явления: '+ ${el.yavl}"/>
- <h1 th:text="'Температура: '+ ${el.temp}"/>
- <h1 th:text="'Влажность: '+ ${el.vlaj}"/>
- <h1 th:text="'Давление: '+ ${el.davl}"/>
-</div>
-</div>
+<div id="weatherapi">Погода по данным сервиса weatherapi.com</div>
+<table id="firsttable">
+    <tr>
+        <th class ="header">Дата</th>
+        <th class ="header">Город</th>
+        <th class ="header">Явления</th>
+        <th class ="header">Температура</th>
+        <th class ="header">Влажность</th>
+        <th class ="header">Давление</th>
+    </tr>
+    <tr th:each="el : ${Ufafirst}">
+        <th th:text="${el.date}"></th>
+        <th th:text="${el.town}"></th>
+        <th th:text="${el.yavl}"></th>
+        <th th:text="${el.temp}"></th>
+        <th th:text="${el.vlaj}"></th>
+        <th th:text="${el.davl}"></th>
+    </tr>
+    <tr th:each="el : ${Uchalyfirst}">
+        <th th:text="${el.date}"></th>
+        <th th:text="${el.town}"></th>
+        <th th:text="${el.yavl}"></th>
+        <th th:text="${el.temp}"></th>
+        <th th:text="${el.vlaj}"></th>
+        <th th:text="${el.davl}"></th>
+    </tr>
+    <tr th:each="el : ${Belebeyfirst}">
+        <th th:text="${el.date}"></th>
+        <th th:text="${el.town}"></th>
+        <th th:text="${el.yavl}"></th>
+        <th th:text="${el.temp}"></th>
+        <th th:text="${el.vlaj}"></th>
+        <th th:text="${el.davl}"></th>
+    </tr>
+</table>
+    <div id="weatherbit">Погода по данным сервиса api.weatherbit.io</div>
+    <table id="secondtable">
+        <tr>
+            <th class ="header">Дата</th>
+            <th class ="header">Город</th>
+            <th class ="header">Явления</th>
+            <th class ="header">Температура</th>
+            <th class ="header">Влажность</th>
+            <th class ="header">Давление</th>
+        </tr>
+<tr th:each="el : ${Ufasecond}">
+    <th th:text="${el.date}"></th>
+    <th th:text="${el.town}"></th>
+    <th th:text="${el.yavl}"></th>
+    <th th:text="${el.temp}"></th>
+    <th th:text="${el.vlaj}"></th>
+    <th th:text="${el.davl}"></th>
+</tr>
+    <tr th:each="el : ${Uchalysecond}">
+        <th th:text="${el.date}"></th>
+        <th th:text="${el.town}"></th>
+        <th th:text="${el.yavl}"></th>
+        <th th:text="${el.temp}"></th>
+        <th th:text="${el.vlaj}"></th>
+        <th th:text="${el.davl}"></th>
+    </tr>
+    <tr th:each="el : ${Belebeysecond}">
+        <th th:text="${el.date}"></th>
+        <th th:text="${el.town}"></th>
+        <th th:text="${el.yavl}"></th>
+        <th th:text="${el.temp}"></th>
+        <th th:text="${el.vlaj}"></th>
+        <th th:text="${el.davl}"></th>
+    </tr>
+</table>
+    <a id="allDB" href ="/history"> Посмотреть историю </a>
 </body>
 </html>

@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface WthRepository extends CrudRepository<WorldWth, Long> {
+
 }

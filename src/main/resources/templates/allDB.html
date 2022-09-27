@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+        <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Главная страница</title>
+</head>
+<body>
+<div id="weatherapi">Вся история погоды</div>
+<table id="firsttable">
+    <tr>
+        <th class ="header">Id</th>
+        <th class ="header">Дата</th>
+        <th class ="header">Город</th>
+        <th class ="header">Явления</th>
+        <th class ="header">Температура</th>
+        <th class ="header">Влажность</th>
+        <th class ="header">Давление</th>
+    </tr>
+    <tr th:each="el : ${worldwths}">
+        <th th:text="${el.id}"></th>
+        <th th:text="${el.date}"></th>
+        <th th:text="${el.town}"></th>
+        <th th:text="${el.yavl}"></th>
+        <th th:text="${el.temp}"></th>
+        <th th:text="${el.vlaj}"></th>
+        <th th:text="${el.davl}"></th>
+    </tr>
+ </table>
+<a id="home" href ="/" > Назад </a>
+</body>
+</html>
