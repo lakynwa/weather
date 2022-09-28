@@ -2,17 +2,11 @@
 font-style: normal;
 font-weight: 400;
 font-size: 24px;}
-#firsttable {
+.table {
 	border-collapse: collapse;
-margin-left: 250px;
+margin-left: 300px;
 align-items: center;
 	border:5px solid #1FAB89;}
-
-#secondtable {
-border-collapse: collapse;
-    margin-left: 250px;
-    align-items: center;
-    	border:5px solid #1FAB89;}
 
 .header
 {
@@ -25,19 +19,10 @@ color: #000000;
 border: 2px solid black;
 
 }
-#weatherapi
+.weatherapi
 {
-margin-top: 50px;
-margin-left: 250px;
-font-family: 'Montaga';
-font-style: italic;
-font-size: 24px;
-color: #1FAB89;
-}
-#weatherbit
-{
-margin-top: 100px;
-margin-left: 250px;
+margin-top: 30px;
+margin-left: 300px;
 font-family: 'Montaga';
 font-style: italic;
 font-size: 24px;
@@ -50,8 +35,27 @@ border: 1px solid black;
 {
 width: 300px;
 height: 68px;
-margin-left: 450px;
-margin-top: 120px;
+margin-left: 600px;
+margin-top: 50px;
+background: #1FAB89;
+border-radius: 35px;
+font-family: 'Manuale';
+font-style: normal;
+text-decoration: none;
+font-weight: 500;
+font-size: 24px;
+line-height: 57px;
+border: none;
+cursor: pointer;
+color: #FAFAFA;
+padding: 5px 11px;
+}
+#update
+{
+width: 300px;
+height: 68px;
+margin-left: 600px;
+margin-top: 20px;
 background: #1FAB89;
 border-radius: 35px;
 font-family: 'Manuale';
@@ -69,8 +73,8 @@ padding: 5px 11px;
 {
 width: 300px;
 height: 68px;
-margin-left: 350px;
-margin-top: 120px;
+margin-left: 650px;
+margin-top: 40px;
 background: #1FAB89;
 border-radius: 35px;
 font-family: 'Manuale';

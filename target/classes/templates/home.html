@@ -6,8 +6,8 @@
     <title>Главная страница</title>
 </head>
 <body>
-<div id="weatherapi">Погода по данным сервиса weatherapi.com</div>
-<table id="firsttable">
+<div class="weatherapi">Погода по данным сервиса weatherapi.com</div>
+<table class="table">
     <tr>
         <th class ="header">Дата</th>
         <th class ="header">Город</th>
@@ -41,8 +41,8 @@
         <th th:text="${el.davl}"></th>
     </tr>
 </table>
-    <div id="weatherbit">Погода по данным сервиса api.weatherbit.io</div>
-    <table id="secondtable">
+    <div class="weatherapi">Погода по данным сервиса api.weatherbit.io</div>
+    <table class="table">
         <tr>
             <th class ="header">Дата</th>
             <th class ="header">Город</th>
@@ -76,6 +76,14 @@
         <th th:text="${el.davl}"></th>
     </tr>
 </table>
-    <a id="allDB" href ="/history"> Посмотреть историю </a>
+
+<form action="/history" method="get">
+    <input type="hidden" />
+    <button id="allDB" type="submit">Посмотреть историю</button>
+    </form>
+<form action="/" method="post">
+    <input type="hidden" name="saveInDB" value="1"/>
+    <button id="update" type="submit">Обновить</button>
+</form>
 </body>
 </html>

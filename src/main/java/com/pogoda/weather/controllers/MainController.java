@@ -14,6 +14,9 @@ import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import java.util.Optional;
 
 import javax.persistence.Id;
@@ -35,19 +38,36 @@ public class MainController {
     @GetMapping("/")
     public String home(Model model) throws IOException {
         WorldWth worldWthufasecond = null;
-        worldService.Ufafirst();
-        worldService.Uchalyfirst();
-        worldService.Belebeyfirst();
-        worldService.Ufasecond();
-         worldService.Uchalysecond();
-        worldService.Belebeysecond();
         long max=worldWthRepository.count();
+        System.out.println(max);
         model.addAttribute("Ufafirst",worldWthRepository.findById(max-3).get());
         model.addAttribute("Uchalyfirst",worldWthRepository.findById(max-2).get());
         model.addAttribute("Belebeyfirst",worldWthRepository.findById(max-1).get());
         model.addAttribute("Ufasecond",worldWthRepository.findById(max).get());
-         model.addAttribute("Uchalysecond",worldWthRepository.findById(max+1).get());
-         model.addAttribute("Belebeysecond",worldWthRepository.findById(max+2).get());
+        model.addAttribute("Uchalysecond",worldWthRepository.findById(max+1).get());
+        model.addAttribute("Belebeysecond",worldWthRepository.findById(max+2).get());
+        return "home";
+    }
+    @PostMapping("/")
+    public String home(Model model, @RequestParam int saveInDB) throws IOException {
+         if (saveInDB == 1) {
+            worldService.Ufafirst();
+            worldService.Uchalyfirst();
+            worldService.Belebeyfirst();
+            worldService.Ufasecond();
+            worldService.Uchalysecond();
+            worldService.Belebeysecond();
+            saveInDB=0;
+        }
+        WorldWth worldWthufasecond = null;
+        long max=worldWthRepository.count();
+        System.out.println(max);
+        model.addAttribute("Ufafirst",worldWthRepository.findById(max-3).get());
+        model.addAttribute("Uchalyfirst",worldWthRepository.findById(max-2).get());
+        model.addAttribute("Belebeyfirst",worldWthRepository.findById(max-1).get());
+        model.addAttribute("Ufasecond",worldWthRepository.findById(max).get());
+        model.addAttribute("Uchalysecond",worldWthRepository.findById(max+1).get());
+        model.addAttribute("Belebeysecond",worldWthRepository.findById(max+2).get());
         return "home";
     }
 

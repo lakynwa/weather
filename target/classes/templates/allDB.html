@@ -6,8 +6,8 @@
     <title>Главная страница</title>
 </head>
 <body>
-<div id="weatherapi">Вся история погоды</div>
-<table id="firsttable">
+<div class="weatherapi">Вся история погоды</div>
+<table class="table">
     <tr>
         <th class ="header">Id</th>
         <th class ="header">Дата</th>
@@ -27,6 +27,9 @@
         <th th:text="${el.davl}"></th>
     </tr>
  </table>
-<a id="home" href ="/" > Назад </a>
+<form action="/" method="get">
+    <input type="hidden" />
+    <button id="home" type="submit">Назад</button>
+</form>
 </body>
 </html>
