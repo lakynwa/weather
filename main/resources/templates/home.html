@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+        <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Главная страница</title>
+</head>
+<body>
+<div class="weatherapi">Погода по данным сервиса weatherapi.com</div>
+<table class="table">
+    <tr>
+        <th class ="header">Дата</th>
+        <th class ="header">Город</th>
+        <th class ="header">Явления</th>
+        <th class ="header">Температура</th>
+        <th class ="header">Влажность</th>
+        <th class ="header">Давление</th>
+    </tr>
+    <tr th:each="el : ${Ufafirst}">
+        <th th:text="${el.date}"></th>
+        <th th:text="${el.town}"></th>
+        <th th:text="${el.yavl}"></th>
+        <th th:text="${el.temp}"></th>
+        <th th:text="${el.vlaj}"></th>
+        <th th:text="${el.davl}"></th>
+    </tr>
+    <tr th:each="el : ${Uchalyfirst}">
+        <th th:text="${el.date}"></th>
+        <th th:text="${el.town}"></th>
+        <th th:text="${el.yavl}"></th>
+        <th th:text="${el.temp}"></th>
+        <th th:text="${el.vlaj}"></th>
+        <th th:text="${el.davl}"></th>
+    </tr>
+    <tr th:each="el : ${Belebeyfirst}">
+        <th th:text="${el.date}"></th>
+        <th th:text="${el.town}"></th>
+        <th th:text="${el.yavl}"></th>
+        <th th:text="${el.temp}"></th>
+        <th th:text="${el.vlaj}"></th>
+        <th th:text="${el.davl}"></th>
+    </tr>
+</table>
+    <div class="weatherapi">Погода по данным сервиса api.weatherbit.io</div>
+    <table class="table">
+        <tr>
+            <th class ="header">Дата</th>
+            <th class ="header">Город</th>
+            <th class ="header">Явления</th>
+            <th class ="header">Температура</th>
+            <th class ="header">Влажность</th>
+            <th class ="header">Давление</th>
+        </tr>
+<tr th:each="el : ${Ufasecond}">
+    <th th:text="${el.date}"></th>
+    <th th:text="${el.town}"></th>
+    <th th:text="${el.yavl}"></th>
+    <th th:text="${el.temp}"></th>
+    <th th:text="${el.vlaj}"></th>
+    <th th:text="${el.davl}"></th>
+</tr>
+    <tr th:each="el : ${Uchalysecond}">
+        <th th:text="${el.date}"></th>
+        <th th:text="${el.town}"></th>
+        <th th:text="${el.yavl}"></th>
+        <th th:text="${el.temp}"></th>
+        <th th:text="${el.vlaj}"></th>
+        <th th:text="${el.davl}"></th>
+    </tr>
+    <tr th:each="el : ${Belebeysecond}">
+        <th th:text="${el.date}"></th>
+        <th th:text="${el.town}"></th>
+        <th th:text="${el.yavl}"></th>
+        <th th:text="${el.temp}"></th>
+        <th th:text="${el.vlaj}"></th>
+        <th th:text="${el.davl}"></th>
+    </tr>
+</table>
+
+<form action="/history" method="get">
+    <input type="hidden" />
+    <button id="allDB" type="submit">Посмотреть историю</button>
+    </form>
+<form action="/" method="post">
+    <input type="hidden" name="saveInDB" value="1"/>
+    <button id="update" type="submit">Обновить</button>
+</form>
+</body>
+</html>

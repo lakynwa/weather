@@ -1,0 +1,90 @@
+*{background:#62D2A2; font-family: 'Montaga';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;}
+.table {
+	border-collapse: collapse;
+margin-left: 300px;
+align-items: center;
+	border:5px solid #1FAB89;}
+
+.header
+{
+border-collapse: collapse;
+font-family: 'Montserrat';
+font-style: normal;
+font-size: 32px;
+align-items: center;
+color: #000000;
+border: 2px solid black;
+
+}
+.weatherapi
+{
+margin-top: 30px;
+margin-left: 300px;
+font-family: 'Montaga';
+font-style: italic;
+font-size: 24px;
+color: #1FAB89;
+}
+th {border-collapse: collapse;
+border: 1px solid black;
+ }
+#allDB
+{
+width: 300px;
+height: 68px;
+margin-left: 600px;
+margin-top: 50px;
+background: #1FAB89;
+border-radius: 35px;
+font-family: 'Manuale';
+font-style: normal;
+text-decoration: none;
+font-weight: 500;
+font-size: 24px;
+line-height: 57px;
+border: none;
+cursor: pointer;
+color: #FAFAFA;
+padding: 5px 11px;
+}
+#update
+{
+width: 300px;
+height: 68px;
+margin-left: 600px;
+margin-top: 20px;
+background: #1FAB89;
+border-radius: 35px;
+font-family: 'Manuale';
+font-style: normal;
+text-decoration: none;
+font-weight: 500;
+font-size: 24px;
+line-height: 57px;
+border: none;
+cursor: pointer;
+color: #FAFAFA;
+padding: 5px 11px;
+}
+#home
+{
+width: 300px;
+height: 68px;
+margin-left: 650px;
+margin-top: 40px;
+background: #1FAB89;
+border-radius: 35px;
+font-family: 'Manuale';
+text-decoration: none;
+font-style: normal;
+font-weight: 500;
+font-size: 40px;
+line-height: 57px;
+border: none;
+cursor: pointer;
+color: #FAFAFA;
+padding: 5px 11px;
+}
